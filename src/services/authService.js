@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import authHeader from './auth-header';
+
 const API_URL = 'https://pacific-beach-26992.herokuapp.com/';
 
 class AuthService {
@@ -8,7 +10,7 @@ class AuthService {
       .post(API_URL+'login', {
         email: user.email,
         password: user.motdepasse
-      })
+      }, { headers: authHeader() })
       .then(response => {
         console.log(response.data)
         if (response.data.token) {

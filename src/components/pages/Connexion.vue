@@ -65,7 +65,6 @@ export default {
 
       this.$store.dispatch("auth/connexion", user).then(
         () => {
-          this.$store.dispatch("auth/storeUser",user)
           this.$router.push("/arrivage");
         },
         (error) => {

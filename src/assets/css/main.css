@@ -37,8 +37,8 @@ img{
 
 /*header*/
 .main-header{
-    position: fixed;
-    display: inline-grid;
+    /* position: fixed;
+    display: inline-grid; */
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
     width: 100%;

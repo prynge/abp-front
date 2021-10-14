@@ -40,13 +40,13 @@ export default ({
   },
   mounted(){
 	if(this.utilisateur){
-		this.$store.dispatch('auth/storeUser').then((err)=>{
-			if (err.status === 401) {
-				localStorage.removeItem('user');
-				this.$store.dispatch('auth/logout')
-				this.$router.push("/")
-			}
-		})
+		// this.$store.dispatch('auth/storeUser',this.utilisateur).then((err)=>{
+		// 	if (err.status === 401) {
+		// 		localStorage.removeItem('user');
+		// 		this.$store.dispatch('auth/logout')
+		// 		this.$router.push("/")
+		// 	}
+		// })
 	}
   },
   methods: {

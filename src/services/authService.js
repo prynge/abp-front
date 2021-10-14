@@ -12,25 +12,14 @@ class AuthService {
         password: user.motdepasse
       }, { headers: authHeader() })
       .then(response => {
-        console.log(response.data)
         if (response.data.token) {
           localStorage.setItem("user", JSON.stringify(response.data));
           }
 
-        return response.data;
+        return response.data.user;
       });
   }
 
-  profile() {
-    let tokenStr = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')).token : null ;
-    return axios.get(API_URL + 'api/myprofile', { headers: {"Authorization" : 'Bearer ' + tokenStr} }).then(response => {
-      
-      return response.data;
-    }).catch(error => {
-      return error.response
-      
-    });
-  }
 
   logout() {
     localStorage.removeItem('user');

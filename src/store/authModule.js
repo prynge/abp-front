@@ -14,24 +14,12 @@ export const auth = {
       
       return AuthService.login(user).then(
         user => {
-          console.log(user)
           commit('loginSuccess', user);
+          commit('userProfile', user)
           return Promise.resolve(user);
         },
         error => {
           commit('loginFailure');
-          return Promise.reject(error);
-        }
-      );
-    },
-    storeUser({commit}){
-      return AuthService.profile().then(
-        userProfile => {
-          commit('userProfile', userProfile);
-          return Promise.resolve(userProfile);
-        },
-        error => {
-          console.log()
           return Promise.reject(error);
         }
       );

@@ -1,7 +1,7 @@
 <template>
   <div class="card h-100">
     <div class="row row-xs wd-xl-80p" v-if="arrivage " >
-      <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"  v-if="utilisateur.roles.includes('ROLE_IMPORTER')"><button class="btn btn-success btn-with-icon btn-block" data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="fas fa-plus-circle"></i> Uploader un fichier</button></div>
+      <div class="col-sm-6 col-md-3 mg-t-10 mg-md-t-0"  v-if="utilisateur && utilisateur.roles.includes('ROLE_IMPORTER')"><button class="btn btn-success btn-with-icon btn-block" data-bs-toggle="modal" data-bs-target="#uploadModal"><i class="fas fa-plus-circle"></i> Uploader un fichier</button></div>
     </div><!-- row -->
 	<div v-if="!arrivage" class="progress">
 		<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>

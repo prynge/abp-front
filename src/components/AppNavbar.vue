@@ -9,13 +9,13 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<div class="user navbar-nav ms-auto mb-2 mb-lg-0">
 						<img id="user_photo" src="https://img.icons8.com/ios/452/user--v1.png" alt=""> 
-						<div class="name" v-if="utilisateur"><span><span id="firstname">{{utilisateur.firstname}}</span> <span id="lastname">{{utilisateur.lastname}}</span></span><router-link class="navbar-brand" id="logout" @click.prevent="deconnexion" :to="{ name: 'Se déconnecter' }">Déconnexion</router-link></div>
+						<div class="name" v-if="utilisateur.firstname"><span><span id="firstname">{{utilisateur.firstname}}</span> <span id="lastname">{{utilisateur.lastname}}</span></span><router-link class="navbar-brand" id="logout" @click.prevent="deconnexion" :to="{ name: 'Se déconnecter' }">Déconnexion</router-link></div>
 						<div class="name" v-if="!utilisateur"><router-link class="navbar-brand" id="login" :to="{ name: 'Connexion' }">Connexion</router-link></div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section v-if="utilisateur" class="nav d-flex justify-content-center">
+		<section v-if="utilisateur.firstname" class="nav d-flex justify-content-center">
 			<div class="container-logo">
 			<img src="https://communication.autobonplan.com/abp-home/img/Logo_Autobonplan.png" alt="">
 			</div>

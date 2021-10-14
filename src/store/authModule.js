@@ -44,7 +44,7 @@ export const auth = {
       state.userProfile = null;
     },
     userProfile(state, userProfile){
-      state.userProfile = userProfile.user;
+      state.userProfile = userProfile;
     }
   }
 };

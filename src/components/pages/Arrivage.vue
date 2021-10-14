@@ -244,9 +244,13 @@ export default {
   },
   mounted() {
     this.retrieveArrivage();
-
-    
+  },
+  watch:{
+    uploaded: function (uploaded){
+      console.log(uploaded);
+    }
   }
+
 }
 </script>
 

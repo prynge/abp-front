@@ -38,18 +38,7 @@ export default ({
       return this.$store.state.auth.userProfile;
     }
   },
-  mounted(){
-	if(this.utilisateur){
-		console.log(this.utilisateur)
-		// this.$store.dispatch('auth/storeUser',this.utilisateur).then((err)=>{
-		// 	if (err.status === 401) {
-		// 		localStorage.removeItem('user');
-		// 		this.$store.dispatch('auth/logout')
-		// 		this.$router.push("/")
-		// 	}
-		// })
-	}
-  },
+  mounted(){},
   methods: {
     deconnexion() {
       this.$store.dispatch('auth/logout');

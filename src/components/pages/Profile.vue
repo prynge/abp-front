@@ -52,7 +52,7 @@ export default {
   },
   computed: {
     utilisateur() {
-      return this.$store.state.auth.user;
+      return this.$store.state.auth.userProfile;
     }
   },
   watch:{

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default axios.create({
-  apiBaseURL: "http://localhost:8000/api",
-  baseURL: "http://localhost:8000/",
+  apiBaseURL: "https://pacific-beach-26992.herokuapp.com/api",
+  baseURL: "https://pacific-beach-26992.herokuapp.com",
   headers: {
     "Content-type": "application/json"
   }
